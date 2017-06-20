@@ -12,8 +12,8 @@ $animals = [
 $delimiter=" "; // разделитель
 $new_arr=[]; 
 
-print_r("<h1>Исходный массив:</h1></br>");
+print_r("<h1>Исходный массив:</h1></br><pre>");
 print_r($animals);
-print_r("</br></br>");
+print_r("</pre></br></br>");
 
 ?>

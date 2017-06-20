@@ -8,7 +8,7 @@ $list_used=[];      // список использованых индексов
 $list_places=[];    // собранный многомерный массив "место" - "список животных"
 
 // 1. массив из зверей с названиями из двух слов:
-print_r("</br></br><h1>Массив названий, состоящх более из двух слов:</h1></br>");
+print_r("</br></br><h1>Массив названий, состоящх более из двух слов:</h1></br><pre>");
 foreach($animals as $key => $val) {
   $double_animals[$key]=[];
   $list_used[$key]=[];
@@ -22,7 +22,7 @@ foreach($animals as $key => $val) {
 print_r($double_animals);
 
 // перемешиваем слова в Элементах:
-print_r("</br></br><h1>3. Массив фантастических зверей:</h1></br>");
+print_r("</pre></br></br><h1>3. Массив фантастических зверей:</h1></br><pre>");
 foreach($double_animals as $key => $val) {
   $mystic_animals[$key]=[];
   foreach($val as $sub_val) {
@@ -41,10 +41,11 @@ foreach($double_animals as $key => $val) {
     $mystic_animals[$key][]=explode($delimiter,trim($sub_val))[0]." ".$second_part; // первое слово текущего элемента
   }
 }
+
 print_r($mystic_animals);
 
 // дополнительно:
-print_r("</br></br><h1>Дополнительно. Места обитания</h1></br>");
+print_r("</pre></br></br><h1>Дополнительно. Места обитания</h1></br>");
 foreach ($animals as $key => $val) {
   print_r("<h2>{$key}:</h2><p>".implode($val,", ")."</p>");
 }
